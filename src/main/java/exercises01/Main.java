@@ -1,15 +1,17 @@
+package exercises01;
+
 public class Main {
     static void main() throws InterruptedException {
         LongCounter longCounter = new LongCounter();
         Thread t1 = new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10000; i++) {
                 longCounter.increment();
             }
                 
         });
 
         Thread t2 = new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10000; i++) {
                 longCounter.increment();
             }
         });
