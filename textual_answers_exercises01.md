@@ -25,13 +25,18 @@
 
 1.4 Mandatory
 Goetz: 
+"motivating factors"
 
-Several motivating factors led to the development of operating systems that allowed multiple programs to execute simultaneously:
+**Resource utilization**. Programs sometimes have to wait for external operations such as input or output, and while waiting can do no useful work. It is more efficient to use that wait time to let another program run.
+**Fairness**. Multiple users and programs may have equal claims on the machine's resources. It is preferable to let them share the computer via finer-grained time slicing than to let one program run to completion and then start another.
+**Convenience**. It is often easier or more desirable to write several programs that each perform a single task and have them coordinate with each other as necessary than to write a single program that performs all the tasks.
 
-Resource utilization. Programs sometimes have to wait for external operations such as input or output, and while waiting can do no useful work. It is more efficient to use that wait time to let another program run.
+Notes:
+**Inherent**: User interfaces and other kinds of input/output.
+**Exploitation**: Hardware capable of simultaneously executing multiple streams of statements, a special (but important) case is communication and coordination of independent
+computers on the internet.
+**Hidden**: Enabling several programs to share some resources in a manner where each can act as if
+they had sole ownership.
 
-Fairness. Multiple users and programs may have equal claims on the machine's resources. It is preferable to let them share the computer via finer-grained time slicing than to let one program run to completion and then start another.
-
-Convenience. It is often easier or more desirable to write several programs that each perform a single task and have them coordinate with each other as necessary than to write a single program that performs all the tasks.
-
-1. 
+1. The categories presented by Goetz are concepts that could be used and applied within many different types of concurrent systems, whereas the Concurrency Notes highlight types of systems, which could make use of any of the concepts highlighted by Goetz.
+2. We think many apps, inparticular google maps, would fall under the "inherent" category from Concurrency Notes, whereas it does not fit in any of the motivating factors from Goetz. Google maps is a user interface and therefore fits under the inherent category. Google Maps does not use any "wait" time to execute another program, it is constantly showing many important features. There is only one user and one program is using many resources at once to do many things, not sharing with anything else, meaning it does not fit within fairness or convenience either.
