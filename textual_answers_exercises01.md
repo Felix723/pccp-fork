@@ -39,4 +39,17 @@ computers on the internet.
 they had sole ownership.
 
 1. The categories presented by Goetz are concepts that could be used and applied within many different types of concurrent systems, whereas the Concurrency Notes highlight types of systems, which could make use of any of the concepts highlighted by Goetz.
-2. We think many apps, inparticular google maps, would fall under the "inherent" category from Concurrency Notes, whereas it does not fit in any of the motivating factors from Goetz. Google maps is a user interface and therefore fits under the inherent category. Google Maps does not use any "wait" time to execute another program, it is constantly showing many important features. There is only one user and one program is using many resources at once to do many things, not sharing with anything else, meaning it does not fit within fairness or convenience either.
+2. We think many apps, inparticular google maps, would fall under the "inherent" category from Concurrency Notes,
+   whereas it does not fit in any of the motivating factors from Goetz. Google maps is a user interface and therefore
+   fits under the inherent category. Google Maps does not use any "wait" time to execute another program, it is
+   constantly showing many important features. There is only one user and one program using many resources at once to
+   do many things, not sharing with anything else, meaning it does not fit within fairness or convenience either.
+
+
+1.5 Mandatory
+
+1. We are both using MacOS. MacOS is running natively on the Macbook hardware. 
+2. Both 8 cores, main memory: 24 gb. Cache: multi-level, hierarchical cache design coupled with a Unified Memory Architecture
+   (UMA). L1: 192 KB, L2: 12 MB (4 MB for half of the cores), SLC: 8 MB.
+3. See `Add.java`. The running code took 1042 nanoseconds 
+
