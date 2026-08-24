@@ -12,7 +12,7 @@
 1.2 Mandatory
 
 
-1. See printer.java.
+1. See `Printer.java`.
 2. An interleaving where leaving faults could be described as follows(in bold); t1(1), t2(1), **t1(2), t2(2)**, t2(3), t2(4), t1(3), t2(4), t2(1). So this happens when the schedular chooses to switch threads after entering the print function. 
 3. It is impossible for incorrect patterns to occur because the critical section includes both print statements in the
    correct order. The section is locked so the pattern must be completed before the next thread can enter it. Any
@@ -20,3 +20,9 @@
 
 1.3 Mandatory
 
+1. See `CounterThreads2.java`.
+2. We have added a if statement to the critical section. It checks a static value against the counter. It becomes a part of the critical section because there would be a data race between the two threads, since the counter is shared memory which is written to. We have enclosed the critical section with locks, so only one thread can access the counter at any given time, ensuring mutual exclusion. We had a deadlock, since we forgot to unlock the thread before it returns from the loop upon reaching 15000.
+
+1.4 Mandatory
+
+1. 
